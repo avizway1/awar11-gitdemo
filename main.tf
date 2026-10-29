@@ -6,7 +6,7 @@ terraform {
   backend "s3" {
     bucket       = "aviz.tfstate.awar11"
     key          = "cicdfortf/terraform.tfstate"
-    region       = var.region
+    region       = "ap-south-1"
     use_lockfile = true
   }
 }
