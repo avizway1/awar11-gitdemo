@@ -2,15 +2,6 @@ provider "aws" {
   region = var.region
 }
 
-terraform {
-  backend "s3" {
-    bucket       = "aviz.tfstate.awar11"
-    key          = "cicdfortf/terraform.tfstate"
-    region       = "ap-south-1"
-    use_lockfile = true
-  }
-}
-
 module "ec2" {
   source        = "./modules/ec2"
   ami_id        = var.ami_id
