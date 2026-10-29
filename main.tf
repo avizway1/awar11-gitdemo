@@ -4,9 +4,9 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "aviz.tfstate.awar11"
-    key = "cicdfortf/terraform.tfstate"
-    region = var.region
+    bucket       = "aviz.tfstate.awar11"
+    key          = "cicdfortf/terraform.tfstate"
+    region       = var.region
     use_lockfile = true
   }
 }
